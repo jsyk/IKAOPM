@@ -210,7 +210,7 @@ endfunction
 //define wr/rd counter reset value
 localparam  LENGTH_BIN = length_bin(LENGTH);
 localparam  WRCNTR_INIT = 0;
-localparam  RDCNTR_INIT = {LENGTH - (TAP - 1)};
+localparam  RDCNTR_INIT = (LENGTH - (TAP - 1));
 
 //write and read counter
 reg     [LENGTH_BIN-1:0]    wrcntr;
